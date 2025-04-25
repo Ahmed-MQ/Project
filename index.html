@@ -3,410 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>عراقنا - تاريخ عريق</title>
+    <title>محول العملات العالمي</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <!-- Floating Navigation -->
-    <nav class="floating-nav">
-        <div class="nav-container">
-            <a href="#home" class="nav-logo">عراقنا</a>
-            <div class="nav-links">
-                <a href="#ancient">العصور القديمة</a>
-                <a href="#islamic">العصر الإسلامي</a>
-                <a href="#modern">العراق الحديث</a>
-                <a href="#timeline">الخط الزمني</a>
-                <a href="#gallery">معرض الصور</a>
-            </div>
-            <button class="nav-toggle">
-                <i class="fas fa-bars"></i>
-            </button>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <header id="home" class="hero-section">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <h1 class="hero-title">تاريخ العراق العريق</h1>
-            <p class="hero-subtitle">أرض الحضارات منذ فجر التاريخ</p>
-            <div class="hero-scroll">
-                <span>انتقل للأسفل</span>
-                <i class="fas fa-chevron-down"></i>
-            </div>
-        </div>
+    <header>
+        <nav id="quick-nav">
+            <ul>
+                <li><a href="#converter">محول العملات</a></li>
+                <li><a href="#rates">أسعار الصرف</a></li>
+                <li><a href="#currency-encyclopedia">موسوعة العملات</a></li>
+                <li><a href="#currency-countries">العملات والدول</a></li>
+                <li><a href="#about">حول الموقع</a></li>
+            </ul>
+        </nav>
+        <h1>محول العملات العالمي</h1>
+        <img src="https://cdn.corporatefinanceinstitute.com/assets/currency-basket.jpeg" alt="عملات عالمية" class="header-img">
     </header>
 
-    <!-- Main Content -->
     <main>
-        <!-- Ancient Era Section -->
-        <section id="ancient" class="era-section">
-            <div class="section-header">
-                <h2>العصور القديمة</h2>
-                <div class="section-divider"></div>
-                <p class="section-description">حضارات ما قبل التاريخ وحتى الفتح الإسلامي</p>
+        <section id="converter" class="card">
+            <h2>محول العملات</h2>
+            <div class="converter-container">
+                <div class="input-group">
+                    <label for="amount">المبلغ:</label>
+                    <input type="number" id="amount" placeholder="أدخل المبلغ">
+                </div>
+                
+                <div class="input-group">
+                    <label for="from-currency">من عملة:</label>
+                    <select id="from-currency"></select>
+                </div>
+                
+                <div class="input-group">
+                    <label for="to-currency">إلى عملة:</label>
+                    <select id="to-currency"></select>
+                </div>
+                
+                <button id="convert-btn">تحويل</button>
+                
+                <div class="result" id="result"></div>
             </div>
-
-            <div class="era-cards">
-                <!-- Sumerian Card -->
-                <div class="era-card">
-                    <div class="card-image" style="background-image: url('https://modo3.com/thumbs/fit630x300/259528/1642698743/%D8%A5%D9%86%D8%AC%D8%A7%D8%B2%D8%A7%D8%AA_%D8%A7%D9%84%D8%AD%D8%B6%D8%A7%D8%B1%D8%A9_%D8%A7%D9%84%D8%B3%D9%88%D9%85%D8%B1%D9%8A%D8%A9.jpg');">
-                        <div class="card-overlay"></div>
-                        <h3>الحضارة السومرية</h3>
-                    </div>
-                    <div class="card-content">
-                        <p>أقدم حضارة في التاريخ، اخترعت الكتابة المسمارية وأنظمة الري المتطورة. ازدهرت بين 4500-1900 ق.م في جنوب العراق.</p>
-                        <button class="card-btn" data-target="sumer-more">المزيد <i class="fas fa-arrow-left"></i></button>
-                    </div>
-                    <div id="sumer-more" class="card-expanded">
-                        <div class="expanded-content">
-                            <h4>إنجازات الحضارة السومرية:</h4>
-                            <ul>
-                                <li>أول نظام كتابة في العالم (المسمارية)</li>
-                                <li>تطوير الرياضيات بنظام عد ستيني</li>
-                                <li>إنشاء أول المدن مثل أور وأوروك</li>
-                                <li>تأسيس أول نظام قانوني</li>
-                                <li>ملحمة جلجامش أقدم عمل أدبي</li>
-                            </ul>
-                            <button class="close-btn"><i class="fas fa-times"></i></button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Babylonian Card -->
-                <div class="era-card">
-                    <div class="card-image" style="background-image: url('https://i.ytimg.com/vi/c-i3gMwhWUw/maxresdefault.jpg');">
-                        <div class="card-overlay"></div>
-                        <h3>الحضارة البابلية</h3>
-                    </div>
-                    <div class="card-content">
-                        <p>اشتهرت بشريعة حمورابي والحدائق المعلقة، ازدهرت بين 1894-539 ق.م وأصبحت بابل مركز العالم القديم.</p>
-                        <button class="card-btn" data-target="babylon-more">المزيد <i class="fas fa-arrow-left"></i></button>
-                    </div>
-                    <div id="babylon-more" class="card-expanded">
-                        <div class="expanded-content">
-                            <h4>إنجازات الحضارة البابلية:</h4>
-                            <ul>
-                                <li>شريعة حمورابي أول قانون مكتوب منظم</li>
-                                <li>الحدائق المعلقة إحدى عجائب الدنيا</li>
-                                <li>تقدم كبير في علم الفلك والتنجيم</li>
-                                <li>بوابة عشتار التحفة المعمارية</li>
-                                <li>نظام ري متطور للزراعة</li>
-                            </ul>
-                            <button class="close-btn"><i class="fas fa-times"></i></button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Assyrian Card -->
-                <div class="era-card">
-                    <div class="card-image" style="background-image: url('https://modo3.com/thumbs/fit630x300/283777/1656223891/%D8%A7%D9%84%D8%AD%D8%B6%D8%A7%D8%B1%D8%A9_%D8%A7%D9%84%D8%A2%D8%B4%D9%88%D8%B1%D9%8A%D8%A9_%D9%88%D8%A5%D9%86%D8%AC%D8%A7%D8%B2%D8%A7%D8%AA%D9%87%D8%A7.jpg');">
-                        <div class="card-overlay"></div>
-                        <h3>الحضارة الآشورية</h3>
-                    </div>
-                    <div class="card-content">
-                        <p>إمبراطورية عسكرية قوية بنيت بين 2500-609 ق.م في شمال العراق، اشتهرت بمدينة نينوى وقصورها الضخمة.</p>
-                        <button class="card-btn" data-target="assyria-more">المزيد <i class="fas fa-arrow-left"></i></button>
-                    </div>
-                    <div id="assyria-more" class="card-expanded">
-                        <div class="expanded-content">
-                            <h4>إنجازات الحضارة الآشورية:</h4>
-                            <ul>
-                                <li>أول إمبراطورية عسكرية منظمة</li>
-                                <li>مكتبة نينوى التي حفظت آلاف الألواح</li>
-                                <li>نظام بريدي متطور لربط الإمبراطورية</li>
-                                <li>الثور المجنح رمز القوة والحماية</li>
-                                <li>تطور فن النحت والعمارة</li>
-                            </ul>
-                            <button class="close-btn"><i class="fas fa-times"></i></button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <img src="https://cdn.britannica.com/05/244705-050-30404574/backgrounds-with-colorful-of-many-roll-currency-from-many-country.jpg" alt="آلة حاسبة" class="converter-img">
         </section>
 
-        <!-- Islamic Era Section -->
-        <section id="islamic" class="era-section islamic-era">
-            <div class="section-header">
-                <h2>العصر الإسلامي</h2>
-                <div class="section-divider"></div>
-                <p class="section-description">من الفتح الإسلامي حتى العصر العثماني</p>
-            </div>
-
-            <div class="islamic-content">
-                <div class="islamic-text">
-                    <h3>العراق في ظل الحضارة الإسلامية</h3>
-                    <p>بعد الفتح الإسلامي عام 637م، أصبح العراق مركزاً للحضارة الإسلامية خاصة في العصر العباسي عندما بنيت بغداد عاصمة للخلافة عام 762م. ازدهرت العلوم والفنون والآداب في هذه الفترة.</p>
-                    
-                    <div class="islamic-highlights">
-                        <div class="highlight-item">
-                            <i class="fas fa-book"></i>
-                            <h4>بيت الحكمة</h4>
-                            <p>أكبر مركز علمي في العالم الإسلامي، ترجمت فيه أعمال اليونان والفرس والهنود</p>
-                        </div>
-                        <div class="highlight-item">
-                            <i class="fas fa-university"></i>
-                            <h4>المدرسة المستنصرية</h4>
-                            <p>أقدم جامعة في العالم الإسلامي، تأسست عام 1233م</p>
-                        </div>
-                        <div class="highlight-item">
-                            <i class="fas fa-pen-fancy"></i>
-                            <h4>الأدب العربي</h4>
-                            <p>ظهر في العراق علماء اللغة والأدب مثل الخليل بن أحمد وسيبويه</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="islamic-image">
-                    <img src="https://islamstory.com/images/upload/content/573%D8%AD%D8%B6%D8%A7%D8%B1%D8%A9.jpg" alt="العمارة الإسلامية في العراق">
-                </div>
-            </div>
+        <section id="rates" class="card">
+            <h2>أسعار الصرف اليومية</h2>
+            <div class="rates-table" id="rates-table"></div>
+            <img src="https://cdn.corporatefinanceinstitute.com/assets/currency-1024x682.jpeg" alt="أسعار الصرف" class="rates-img">
         </section>
 
-        <!-- Modern Iraq Section -->
-        <section id="modern" class="era-section modern-era">
-            <div class="section-header">
-                <h2>العراق الحديث</h2>
-                <div class="section-divider"></div>
-                <p class="section-description">من تأسيس الدولة العراقية حتى اليوم</p>
-            </div>
-
-            <div class="modern-tabs">
-                <div class="tab-buttons">
-                    <button class="tab-btn active" data-tab="kingdom">المملكة العراقية</button>
-                    <button class="tab-btn" data-tab="republic">الجمهورية</button>
-                    <button class="tab-btn" data-tab="contemporary">العراق المعاصر</button>
-                </div>
-
-                <div class="tab-content active" id="kingdom">
-                    <div class="tab-text">
-                        <h3>1921-1958: المملكة العراقية</h3>
-                        <p>تأسست المملكة العراقية عام 1921 بعد انهيار الدولة العثمانية، حيث نصب فيصل الأول ملكاً على العراق. شهدت هذه الفترة:</p>
-                        <ul>
-                            <li>تأسيس النظام السياسي والوزاري</li>
-                            <li>بناء المؤسسات التعليمية والصحية</li>
-                            <li>اكتشاف النفط وتوقيع الاتفاقيات الأولى</li>
-                            <li>انضمام العراق لعصبة الأمم عام 1932</li>
-                        </ul>
-                    </div>
-                    <div class="tab-image">
-                        <img src="https://i.servimg.com/u/f11/19/77/58/07/2510.jpg" alt="المملكة العراقية">
-                    </div>
-                </div>
-
-                <div class="tab-content" id="republic">
-                    <div class="tab-text">
-                        <h3>1958-2003: الجمهورية العراقية</h3>
-                        <p>أعلنت الجمهورية بعد ثورة 14 تموز 1958، شهد العراق في هذه الفترة:</p>
-                        <ul>
-                            <li>تأميم النفط عام 1972</li>
-                            <li>الحرب العراقية الإيرانية (1980-1988)</li>
-                            <li>غزو الكويت عام 1990</li>
-                            <li>الحصار الاقتصادي في التسعينيات</li>
-                        </ul>
-                    </div>
-                    <div class="tab-image">
-                        <img src="https://www.alaraby.co.uk/sites/default/files/2022-07/%D8%B9%D8%A8%D8%AF%20%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%20%D8%B9%D8%A7%D8%B1%D9%81.jpeg" alt="الجمهورية العراقية">
-                    </div>
-                </div>
-
-                <div class="tab-content" id="contemporary">
-                    <div class="tab-text">
-                        <h3>2003-الآن: العراق المعاصر</h3>
-                        <p>بعد الغزو الأمريكي عام 2003، دخل العراق مرحلة جديدة شهدت:</p>
-                        <ul>
-                            <li>سقوط نظام صدام حسين</li>
-                            <li>كتابة دستور جديد عام 2005</li>
-                            <li>الصراعات الطائفية والحرب على الإرهاب</li>
-                            <li>إعادة الإعمار وتحديات البناء</li>
-                        </ul>
-                    </div>
-                    <div class="tab-image">
-                        <img src="https://media.shafaq.com/media/arcella/1692682068209.jpg" alt="العراق المعاصر">
-                    </div>
-                </div>
-            </div>
+        <section id="currency-encyclopedia" class="card">
+            <h2>موسوعة العملات: معلومات وحقائق عن العملات</h2>
+            <div class="encyclopedia-content" id="encyclopedia-content"></div>
+            <img src="https://www.rbcroyalbank.com/en-ca/wp-content/uploads/sites/12/2023/09/Untitled-design-2023-07-31T120240.836-1.jpg" alt="موسوعة العملات" class="encyclopedia-img">
         </section>
 
-        <!-- Timeline Section -->
-        <section id="timeline" class="timeline-section">
-            <div class="section-header">
-                <h2>الخط الزمني لتاريخ العراق</h2>
-                <div class="section-divider"></div>
-                <p class="section-description">أهم المحطات التاريخية عبر العصور</p>
+        <section id="currency-countries" class="card">
+            <h2>العملات والدول</h2>
+            <div class="countries-container">
+                <div class="input-group">
+                    <label for="currency-select">اختر عملة:</label>
+                    <select id="currency-select"></select>
+                </div>
+                <button id="find-countries-btn">ابحث عن الدول</button>
+                <div class="countries-result" id="countries-result"></div>
             </div>
-
-            <div class="timeline-container">
-                <div class="timeline-progress"></div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-date">3500 ق.م</div>
-                    <div class="timeline-content">
-                        <h3>اختراع الكتابة</h3>
-                        <p>اخترع السومريون الكتابة المسمارية في جنوب العراق</p>
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-date">2334 ق.م</div>
-                    <div class="timeline-content">
-                        <h3>الإمبراطورية الأكدية</h3>
-                        <p>قيام أول إمبراطورية في التاريخ بقيادة سرجون الأكدي</p>
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-date">1792 ق.م</div>
-                    <div class="timeline-content">
-                        <h3>شريعة حمورابي</h3>
-                        <p>وضع الملك حمورابي أول قانون مكتوب في التاريخ</p>
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-date">539 ق.م</div>
-                    <div class="timeline-content">
-                        <h3>سقوط بابل</h3>
-                        <p>الفرس يحتلون بابل وينهون الحكم البابلي</p>
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-date">637 م</div>
-                    <div class="timeline-content">
-                        <h3>الفتح الإسلامي</h3>
-                        <p>معركة القادسية وبداية العصر الإسلامي</p>
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-date">762 م</div>
-                    <div class="timeline-content">
-                        <h3>بناء بغداد</h3>
-                        <p>الخليفة المنصور يؤسس عاصمة الدولة العباسية</p>
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-date">1258 م</div>
-                    <div class="timeline-content">
-                        <h3>سقوط بغداد</h3>
-                        <p>المغول يدمرون بغداد وينهون الخلافة العباسية</p>
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-date">1921 م</div>
-                    <div class="timeline-content">
-                        <h3>المملكة العراقية</h3>
-                        <p>تأسيس الدولة العراقية الحديثة</p>
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-date">1958 م</div>
-                    <div class="timeline-content">
-                        <h3>الجمهورية</h3>
-                        <p>ثورة 14 تموز وإعلان الجمهورية</p>
-                    </div>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-date">2003 م</div>
-                    <div class="timeline-content">
-                        <h3>الاحتلال الأمريكي</h3>
-                        <p>سقوط نظام صدام حسين</p>
-                    </div>
-                </div>
-            </div>
+            <img src="https://puzzlemania-154aa.kxcdn.com/products/2024/puzzle-bluebird-1000-pieces-world-geo-political-map.webp" alt="خريطة العالم" class="countries-img">
         </section>
 
-        <!-- Gallery Section -->
-        <section id="gallery" class="gallery-section">
-            <div class="section-header">
-                <h2>معرض الصور</h2>
-                <div class="section-divider"></div>
-                <p class="section-description">آثار ومعالم العراق عبر التاريخ</p>
-            </div>
-
-            <div class="gallery-container">
-                <div class="gallery-item">
-                    <img src="https://cdn1-m.alittihad.ae/store/archive/image/2021/3/31/faf18dfa-6a76-427c-9f30-b2f988ac4f63.jpg" alt="آثار سومرية">
-                    <div class="gallery-caption">زقورة أور</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="https://arabicpost.net/wp-content/uploads/2022/07/shutterstock_182077328-1000x600.jpg" alt="بوابة عشتار">
-                    <div class="gallery-caption">بوابة عشتار</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="https://almerja.com/azaat/medea/imagandvideo/w16063112612199957135.jpg" alt="الثور المجنح">
-                    <div class="gallery-caption">الثور المجنح الآشوري</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="https://iraq.shafaqna.com/wp-content/uploads/2020/04/3170741.jpg" alt="العمارة الإسلامية">
-                    <div class="gallery-caption">العمارة الإسلامية</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="https://static.dw.com/image/17772742_605.jpg" alt="بغداد القديمة">
-                    <div class="gallery-caption">بغداد في العشرينيات</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="https://www.islamtimes.com/images/docs/000002/n00002037-r-b-011.bmp" alt="العراق الحديث">
-                    <div class="gallery-caption">بغداد الحديثة</div>
-                </div>
-            </div>
+        <section id="about" class="card">
+            <h2>حول الموقع</h2>
+            <p>هذا الموقع يقدم خدمة تحويل العملات بين أكثر من 30 عملة عالمية باستخدام أسعار الصرف الحالية. يمكنك التحويل بين العملات الرئيسية مثل الدولار الأمريكي، اليورو، الجنيه الإسترليني وغيرها.</p>
+            <p>نحن نستخدم مصادر موثوقة لأسعار الصرف ونقوم بتحديثها بشكل دوري لضمان دقة التحويلات.</p>
+            <img src="https://cdn.pixabay.com/photo/2015/07/17/22/43/student-849822_640.jpg" alt="حول الموقع" class="about-img">
         </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="main-footer">
-        <div class="footer-container">
-            <div class="footer-about">
-                <h3>عراقنا</h3>
-                <p>موقع مخصص لتاريخ العراق العريق وحضارته العظيمة عبر العصور</p>
-                <div class="footer-social">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-youtube"></i></a>
-                </div>
-            </div>
-            <div class="footer-links">
-                <h3>روابط سريعة</h3>
-                <ul>
-                    <li><a href="#ancient">العصور القديمة</a></li>
-                    <li><a href="#islamic">العصر الإسلامي</a></li>
-                    <li><a href="#modern">العراق الحديث</a></li>
-                    <li><a href="#timeline">الخط الزمني</a></li>
-                    <li><a href="#gallery">معرض الصور</a></li>
-                </ul>
-            </div>
-            <div class="footer-contact">
-                <h3>اتصل بنا</h3>
-                <p><i class="fas fa-map-marker-alt"></i> بغداد، العراق</p>
-                <p><i class="fas fa-phone"></i> +964 770 123 4567</p>
-                <p><i class="fas fa-envelope"></i> info@iraqhistory.com</p>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 عراقنا. جميع الحقوق محفوظة.</p>
-        </div>
+    <footer>
+        <p>© 2025 محول العملات العالمي. جميع الحقوق محفوظة.</p>
     </footer>
 
-    <!-- Back to Top Button -->
-    <button id="back-to-top" title="العودة للأعلى">
-        <i class="fas fa-arrow-up"></i>
-    </button>
-
-    <!-- Lightbox Modal -->
-    <div id="lightbox" class="lightbox">
-        <span class="close-lightbox">&times;</span>
-        <img class="lightbox-content" id="lightbox-img">
-        <div id="caption"></div>
-    </div>
+    <button id="scroll-top-btn" title="الانتقال للأعلى"><i class="fas fa-arrow-up"></i></button>
 
     <script src="script.js"></script>
 </body>
